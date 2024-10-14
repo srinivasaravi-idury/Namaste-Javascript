@@ -9,9 +9,11 @@ createOrder(cart)
     return proceedToPayment(orderId)
 })
 .then(function(paymentInfo){
+    console.log(paymentInfo)
     return showOrderSummary(paymentInfo)
 })
 .then(function(orderSummary){
+    console.log(orderSummary)
     return updateWalletBalance(orderSummary)
 })
 .then(function(walletBalance){
